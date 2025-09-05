@@ -6,7 +6,11 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@types/better-sqlite3": "^7.6.13",
+    "axios": "^1.11.0",
+    "better-sqlite3": "^12.2.0",
+    "elysia": "latest",
+    "redis": "^5.8.2"
   },
   "devDependencies": {
     "bun-types": "latest"
