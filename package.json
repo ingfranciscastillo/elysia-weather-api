@@ -1,19 +1,25 @@
 {
   "name": "elysia-weather-api",
-  "version": "1.0.50",
+  "private": true,
+  "keywords": ["weather", "microservice", "elysia", "bun", "typescript"],
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "drizzle-kit generate",
+    "studio": "drizzle-kit studio",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@types/better-sqlite3": "^7.6.13",
+    "@libsql/client": "^0.15.14",
     "axios": "^1.11.0",
-    "better-sqlite3": "^12.2.0",
+    "drizzle-orm": "^0.44.5",
     "elysia": "latest",
     "redis": "^5.8.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.31.4"
   },
-  "module": "src/index.js"
+  "main": "src/index.js"
 }
